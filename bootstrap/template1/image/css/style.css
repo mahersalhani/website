@@ -1,0 +1,252 @@
+:root {
+  --color: #19283f;
+  --geen-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--geen-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.text-none {
+  text-transform: none;
+}
+.section-pad {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+/* start navbar */
+.navbar {
+  background-color: var(--color);
+}
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--geen-color);
+}
+.navbar .search {
+  border-left: 1px solid var(--geen-color);
+}
+.navbar .search svg {
+  color: var(--geen-color);
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  font-size: 25px;
+  border-color: #fff;
+  border-width: 2px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--geen-color);
+}
+/* end navbar */
+/* strat landing */
+.landing {
+  background-color: var(--color);
+  height: calc(100vh - 70px);
+}
+/* end landing */
+/* start features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  height: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--geen-color);
+}
+.features h4 {
+  color: var(--yellow-color);
+}
+/* end features */
+/* start portfolio */
+.portfolio {
+  background-color: var(--section-color);
+}
+.portfolio ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.portfolio ul li {
+  padding: 0.5rem 1rem;
+}
+.portfolio ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.portfolio .box {
+  padding: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.portfolio .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: hsla(178, 63%, 51%, 0.8);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  left: -100%;
+  transition: 0.3s;
+}
+.portfolio .box:hover::before {
+  left: 5px;
+}
+.hide {
+  opacity: 1;
+  animation-name: a1;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes a1 {
+  100% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+}
+.show {
+  opacity: 1;
+  animation-name: a2;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes a2 {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+  }
+  100% {
+    opacity: 1;
+    padding: 5px;
+  }
+}
+/* end portfolio */
+/* start about us */
+.about-us {
+  padding-top: 80px;
+}
+.about-us .description {
+  max-width: 500px;
+}
+/* end about us */
+/* start team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .box h4 {
+  background-color: var(--geen-color);
+}
+/* end team */
+/* start project */
+.project {
+  background-color: var(--color);
+}
+/* end project */
+/* start subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="email"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.subscribe input[type="email"]:focus {
+  outline: none;
+}
+.subscribe input[type="email"]::placeholder {
+  color: #fff;
+}
+.subscribe input[type="submit"] {
+  background-color: var(--color);
+  color: var(--yellow-color);
+}
+/* end subscribe */
+/* strart footer */
+.footer {
+  background-color: var(--color);
+}
+.footer .copyright > span {
+  color: var(--geen-color);
+}
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
+.footer .contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+.facebook {
+  background-color: #1877f2;
+}
+.twitter {
+  background-color: #1da1f2;
+}
+.linkedin {
+  background-color: #0077b5;
+}
+.youtube {
+  background-color: #ff0000;
+}
+/* end footer */
+/* start go to top */
+.top {
+  width: 30px;
+  height: 30px;
+  bottom: 30px;
+  right: 25px;
+  background-color: var(--red-color);
+  font-size: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: -100;
+}
+.top a {
+  color: var(--yellow-color);
+}
+/* end go to top */

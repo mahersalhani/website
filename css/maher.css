@@ -4,6 +4,26 @@
   --back-color: rgb(15 116 143 / 70%);
 }
 /* end var  */
+/* start to top */
+.top {
+  background-color: var(--color);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: -1;
+  opacity: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+/* end to top */
 /* start main title  */
 .container .main-title {
   width: fit-content;
